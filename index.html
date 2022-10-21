@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>ML19017 - Guia 61c</title>
+		<meta charset="utf-8" lang="es"/>
+		<link rel=StyleSheet href="estilo.css" type="text/css" media=screen>
+		<script src="codigo.js"></script>
+	</head>	
+	<body>
+ 		<h1>… Ejemplo Web API - Guia 61c Versión 2</h1>
+		<p>ML19017, Cristian Mejia</p>
+		<p><button type="button" onclick="obtenerProductos(); this.style.display='none';">Obtener Productos</button></p>
+		<div id="formulario" style="display:none;">
+			<form action="index.html" id="form-insert" class="form-insert" method="post" onsubmit="return false">
+				<h3>Agregar Registro</h3>
+				<label for="title">Titulo</label><input type="text" name="title" id="input-title" title="Titulo" required>
+				<label for="description">Descripción</label><input type="text" name="description" id="input-description" title="Descripción" required>
+				<label for="price">Precio</label><input type="number" name="price" id="input-price" title="Precio" max="10000" min="0" step="1" required>
+				<label for="category">Categoria</label><input type="text" name="category" id="input-category" title="Categoria" required>
+				<input type="submit" value="Agregar" class="boton" onclick="insertar()">
+			</form>
+			<form action="index.html" id="form-filters" class="form-filters" method="post" onsubmit="return false">
+				<h3>Seleccione Categorias</h3>
+				<input type="checkbox" id="c1" value="c1" title="Electronicos" checked>Electronicos
+				<input type="checkbox" id="c2" value="c2" title="Joyería" checked>Joyería
+				<input type="checkbox" id="c3" value="c3" title="Ropa de Caballero" checked>Ropa Caballero
+				<input type="checkbox" id="c4" value="c4" title="Ropa de Dama" checked>Ropa Dama
+				<ol>
+					<li>Click en la imagen para Acercamiento</li>
+					<li>Click en precio para ordenar Asc o Desc</li>
+				</ol>
+				<div id="listado">
+					<table id="tabla" class="styled-table-products">
+						<thead>
+							<tr><th>ID</th><th>Foto</th><th  id="price">Price</th>
+							<th>Title</th><th>Description</th><th>Category</th><th>Action</th></tr>
+						</thead>
+						<tbody id="tbody"></tbody>
+					</table>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

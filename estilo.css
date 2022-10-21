@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    margin: 10px;
+}
+
+img {
+    width: 3cm;
+    height: 3cm;
+}
+
+.boton {
+    background-color: crimson;
+    color: white;
+    width: 70px;
+    height: 35px;
+    border: none;
+}
+
+.boton:hover {
+    background-color: rgb(231, 127, 127);
+    color: black;
+}
+
+.foto {
+    background-color: rgb(255, 255, 255);
+}
+
+.form-filters {
+    background-color: #ececec;
+    width: 70%;
+    padding: 25px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-filters input {
+    margin: 15px 30px;
+}
+
+.form-insert {
+    background-color: #cdebff;
+    width: 70%;
+    margin: 8px auto;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-insert input {
+    margin: 15px 30px;
+}
+
+/* ------------ ESTILOS DE LA TABLA --------------- */
+.styled-table-products {
+    background-color: #cdebff;
+    border-collapse: collapse;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    margin: 25px auto;
+    font-size: 1em;
+    min-width: 450px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table-products thead tr {
+    background-color: #e49929;
+    color: #ffffff;
+    text-align: middle;
+}
+
+.styled-table-products thead tr a {
+    color: #ffffff;
+    text-align: middle;
+}
+
+.styled-table-products th, .styled-table-products td {
+    padding: 12px 15px;
+}
+
+.styled-table-products tbody tr {
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.styled-table-products tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.styled-table-products tbody tr:last-of-type {
+    border-bottom: 1px solid black;
+}
+
+th#price {
+    cursor: pointer;
+}
+
+li {
+    color: blue;
+}
+
+/*si chequea muestra los productos sin cheque desaparecen los productos*/
+input#c1:checked ~ div table tbody tr.c1 {
+    display: table-row;
+}
+
+input#c1:not(checked) ~ div table tbody tr.c1 {
+    display: none;
+}
+
+input#c2:checked ~ div table tbody tr.c2 {
+    display: table-row;
+}
+
+input#c2:not(checked) ~ div table tbody tr.c2 {
+    display: none;
+}
+
+input#c3:checked ~ div table tbody tr.c3 {
+    display: table-row;
+}
+
+input#c3:not(checked) ~ div table tbody tr.c3 {
+    display: none;
+}
+input#c4:checked ~ div table tbody tr.c4 {
+    display: table-row;
+}
+
+input#c4:not(checked) ~ div table tbody tr.c4 {
+    display: none;
+}
